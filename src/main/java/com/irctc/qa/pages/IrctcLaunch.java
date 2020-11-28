@@ -1,11 +1,16 @@
 package com.irctc.qa.pages;
 
 import com.irctc.base.TestBase;
+import com.irctc.base.TestBasexl;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.Properties;
 import java.util.Set;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -21,6 +26,7 @@ public class IrctcLaunch extends TestBase{
 	public IrctcLaunch() throws IOException {
 		super();
 		PageFactory.initElements(driver, this);
+		
 	}
 
 	//@FindBy(xpath="//button[@class='btn btn-primary'and @type='submit']")
@@ -39,9 +45,11 @@ public class IrctcLaunch extends TestBase{
 	@FindBy(xpath="//a[@href='http://contents.irctc.co.in/en/ListofTrainswithPantryCar.pdf']")
 	public WebElement link;
 	
-	public void driverWebElements() {
-		PageFactory.initElements(driver, this);
-	}
+	@FindBy(xpath="//button[@label='Find Trains']") WebElement FindTrainsButton;
+	
+	//public void driverWebElements() {
+		//PageFactory.initElements(driver, this);
+	//}
 	
 	
 	
@@ -51,7 +59,18 @@ public class IrctcLaunch extends TestBase{
 	}
 	
 
+	public void from() {
+		//fromfield.sendKeys("ONGOLE - OGL");
+		fromfield.sendKeys();
+	}
 	
+	public void to() {
+		tofield.sendKeys("MGR CHENNAI CTL - MAS");
+	}
+	
+	public void FindTrains() {
+		FindTrainsButton.click();
+	}
 	
 	
 	public  void OkbuttonClick() {

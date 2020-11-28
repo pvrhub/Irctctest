@@ -15,14 +15,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import  com.irctc.base.TestBase;
+import com.irctc.base.TestBasexl;
 import com.irctc.qa.pages.IrctcLaunch;
 
 
-public class SecondTest extends IrctcLaunch {
+public class ThirdTestExcel extends IrctcLaunch {
 	
 	
 
-	public SecondTest() throws IOException {
+	public ThirdTestExcel() throws IOException {
 		super();
 		//PageFactory.initElements(driver, this);
 		// TODO Auto-generated constructor stub
@@ -62,28 +63,29 @@ t.iWait();
 		//t.OkbuttonClick();
 		String expected =(ppt.getProperty("title"));
 		
+		
+		
 		//System.out.println(Title());
 		Assert.assertEquals(expected, Title());
-	
 	}
 	 
 	
 	@Test
 	
 	public void getTitleMain() throws IOException{
-		IrctcLaunch t = new IrctcLaunch();
+		TestBasexl xl = new TestBasexl();
 	
 	
-		
-		t.scroll();
-		t.iWait();
 	
-		t.OkbuttonClick();
-		String expected =(ppt.getProperty("title"));
-		
-		from();
-		to();
+		scroll();
+		iWait();
+	
+		OkbuttonClick();
+		xl.datadrivenfrom();
+		xl.datadrivento();
 		FindTrains();
+		
+		String expected =(ppt.getProperty("title"));
 		
 		//System.out.println(Title());
 		Assert.assertEquals(expected, Title());
