@@ -1,25 +1,31 @@
 package com.irctc.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import com.google.common.io.Files;
 import com.irctc.testutils.TestUtils;
 
 public  class TestBase {
 public static Properties ppt ;
 public static WebDriver driver;
-String actual;
+static String actual;
 //public static  String configBrowser;
 	
-public TestBase() throws IOException {
+public  TestBase() throws IOException {
 	
 	ppt = new Properties();
 	FileInputStream fi= new FileInputStream("C:\\Users\\pvr23\\eclipse-workspace\\Irctctest\\src\\main\\java\\com\\irctc\\config\\properties\\config.properties");
@@ -28,7 +34,7 @@ public TestBase() throws IOException {
 		//configBrowser = ppt.getProperty("browser");
 	}
 
-public  void IrctcIntialize() {
+public static   void IrctcIntialize() {
 	
 	//if(ppt.getProperty("browser").equals("chrome")){
 	/*if (driver.equals(ppt.getProperty("browser"))) {
@@ -102,16 +108,16 @@ public  void IrctcIntialize() {
 		
 	}
 
-public   void pageLoad( ){
+public static   void pageLoad( ){
 	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 }
-public   void iWait(){
+public static   void iWait(){
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 }
 
 
 
-public String  Title(){
+public static String  Title(){
 	
 	actual = driver.getTitle();
 	return actual;
@@ -119,11 +125,20 @@ public String  Title(){
 	
 }
 
-public static void driverclose() {
+public static   void driverclose() {
 	driver.quit();
 }
 
+public static void getprintscreen() throws IOException {
+	TakesScreenshot tscr = (TakesScreenshot) driver;
+	File source = tscr.getScreenshotAs(OutputType.FILE);
+	File target = new File ("C:\\Users\\pvr23\\eclipse-workspace\\Irctctest\\ScreenShots\\1.jpg");
+	Files.copy(source, target);
+}
 
 
+public void Okbutton() {
+	driver.findElement(By.xpath("//button[@class='btn btn-primary'and @type='submit']")).click();
+}
 
 }

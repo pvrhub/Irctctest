@@ -18,11 +18,11 @@ import  com.irctc.base.TestBase;
 import com.irctc.qa.pages.IrctcLaunch;
 
 
-public class FirstTest extends IrctcLaunch {
+public class SecondTest extends IrctcLaunch {
 	
 	
 
-	public FirstTest() throws IOException {
+	public SecondTest() throws IOException {
 		super();
 		//PageFactory.initElements(driver, this);
 		// TODO Auto-generated constructor stub
@@ -50,15 +50,15 @@ public class FirstTest extends IrctcLaunch {
 public void getTitle() throws IOException{
 		IrctcLaunch t = new IrctcLaunch();
 	
-	t.getWindowHandles ();
+	//t.getWindowHandles ();
 	
-		t.scroll();
+		//t.scroll();
 		//driver.findElement(By.xpath("//button[@class='btn btn-primary'and @type='submit']")).click();
 		//Okbutton();
 		//new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(t.OkbuttonClick()));
 t.iWait();
 	  
-		t.clickLink();
+		//t.clickLink();
 		//t.OkbuttonClick();
 		String expected =(ppt.getProperty("title"));
 		
@@ -67,13 +67,29 @@ t.iWait();
 	}
 	 
 	
+	@Test
+	
+	public void getTitleMain() throws IOException{
+		IrctcLaunch t = new IrctcLaunch();
 	
 	
 	
-	///@AfterClass
-	//public static void tearDownAfterClass() throws Exception {
-		//driverclose();
+		t.scroll();
+		t.iWait();
+	
+		t.OkbuttonClick();
+		String expected =(ppt.getProperty("title"));
 		
-	//}
+		//System.out.println(Title());
+		Assert.assertEquals(expected, Title());
+	}
+	 
+	
+	
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		driverclose();
+		
+	}
 
 }
