@@ -60,7 +60,7 @@ public class IrctcLaunch extends TestBase{
 	
 
 	public void from() {
-		//fromfield.sendKeys("ONGOLE - OGL");
+		fromfield.sendKeys("ONGOLE - OGL");
 		fromfield.sendKeys();
 	}
 	
