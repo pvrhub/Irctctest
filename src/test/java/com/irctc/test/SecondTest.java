@@ -46,7 +46,7 @@ public class SecondTest extends IrctcLaunch {
 
 	
 
-	@Test
+/*	@Test
 	//Lokesh first test case to check page title
 public void getTitle() throws IOException{
 		IrctcLaunch t = new IrctcLaunch();
@@ -66,10 +66,10 @@ t.iWait();
 		//System.out.println(Title());
 		Assert.assertEquals(expected, Title());
 	
-	}
+	}*/
 	 
 	
-	@Test
+/*	@Test
 	
 	public void getTitleMain() throws IOException{
 		IrctcLaunch t = new IrctcLaunch();
@@ -88,7 +88,7 @@ t.iWait();
 		
 		//System.out.println(Title());
 		Assert.assertEquals(expected, Title());
-	}
+	}*/
 	 
 @Test
 	
