@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import  com.irctc.base.TestBase;
+import com.irctc.base.TestBasexl;
 import com.irctc.qa.pages.IrctcLaunch;
 
 
@@ -89,7 +90,27 @@ t.iWait();
 		Assert.assertEquals(expected, Title());
 	}
 	 
+@Test
 	
+	public void datadriven() throws IOException{
+		TestBasexl xl = new TestBasexl();
+	
+	
+	
+		scroll();
+		iWait();
+	
+		OkbuttonClick();
+		xl.datadrivenfrom();
+		xl.datadrivento();
+		FindTrains();
+		
+		String expected =(ppt.getProperty("title"));
+		
+		//System.out.println(Title());
+		Assert.assertEquals(expected, Title());
+	}
+	 
 	
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
