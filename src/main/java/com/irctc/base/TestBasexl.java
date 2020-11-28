@@ -21,7 +21,8 @@ public class TestBasexl extends TestBase {
 			
 			int z = wb.getSheetAt(7).getLastRowNum();
 			System.out.println(z);
-			
+			wb.close();
+            target.close();
 
 			}
 	
