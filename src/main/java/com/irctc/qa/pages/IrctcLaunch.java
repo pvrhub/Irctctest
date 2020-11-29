@@ -34,7 +34,7 @@ public class IrctcLaunch extends TestBase{
 	
 	@FindBy(xpath="//button[@class='btn btn-primary'and @type='submit']")
 
-	public WebElement okbtn;
+	public  WebElement okbtn;
 	
 	@FindBy(xpath="//input[@placeholder='From*']")
 	WebElement fromfield;
@@ -60,12 +60,12 @@ public class IrctcLaunch extends TestBase{
 	
 
 	public void from() {
-		fromfield.sendKeys("ONGOLE - OGL");
+		fromfield.sendKeys("DELHI - DLI");
 		
 	}
 	
 	public void to() {
-		tofield.sendKeys("MGR CHENNAI CTL - MAS");
+		tofield.sendKeys("MUMBAI CENTRAL - BCT");
 	}
 	
 	public void FindTrains() {

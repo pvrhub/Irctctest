@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -69,7 +70,7 @@ t.iWait();
 	}*/
 	 
 	
-/*	@Test
+	@Test
 	
 	public void getTitleMain() throws IOException{
 		IrctcLaunch t = new IrctcLaunch();
@@ -82,13 +83,13 @@ t.iWait();
 		t.OkbuttonClick();
 		String expected =(ppt.getProperty("title"));
 		
-		from();
-		to();
-		FindTrains();
+		//from();
+		//to();
+		//FindTrains();
 		
 		//System.out.println(Title());
 		Assert.assertEquals(expected, Title());
-	}*/
+	}
 	 
 @Test
 	
@@ -97,10 +98,10 @@ t.iWait();
 	
 	
 	
-		scroll();
-		iWait();
+		//scroll();
+		//iWait();
 	
-		OkbuttonClick();
+		//OkbuttonClick();
 		xl.datadrivenfrom();
 		xl.datadrivento();
 		FindTrains();

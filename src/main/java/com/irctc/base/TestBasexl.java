@@ -9,15 +9,17 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.openqa.selenium.By;
 
-public class TestBasexl extends TestBase {
-	HSSFSheet irctc;
+import com.irctc.qa.pages.IrctcLaunch;
+
+public class TestBasexl extends IrctcLaunch {
+	HSSFSheet seventh;
 	public TestBasexl() throws IOException{
 		
 			//Properties p = new Properties();
 			File source = new File ("C:\\Users\\pvr23\\eclipse-workspace\\Irctctest\\src\\main\\java\\com\\irctc\\config\\properties\\ezmaap.xls");
 			FileInputStream target = new FileInputStream(source);
 			HSSFWorkbook wb = new HSSFWorkbook(target);
-			irctc=wb.getSheet("irctc");
+			seventh=wb.getSheet("irctc");
 			
 			int z = wb.getSheetAt(7).getLastRowNum();
 			System.out.println(z);
@@ -27,11 +29,24 @@ public class TestBasexl extends TestBase {
 			}
 	
 	public void datadrivenfrom() {
-		String fromStation=irctc.getRow(1).getCell(0).getStringCellValue();
-		driver.findElement(By.xpath("//input[@placeholder='From*']")).sendKeys(fromStation);
+		//int j = seventh.getFirstRowNum();
+		//int k = seventh.getLastRowNum();
+		//for(int i=j+1;i<=k;i++) {
+			
+			String fromStation=seventh.getRow(1).getCell(0).getStringCellValue();
+			driver.findElement(By.xpath("//input[@placeholder='From*']")).sendKeys(fromStation);
+			//String toStation=seventh.getRow(i).getCell(1).getStringCellValue();
+			//driver.findElement(By.xpath("//input[@placeholder='To*']")).sendKeys(toStation);
+			FindTrains();
+			
+		//}
+		
 	}
 	public void datadrivento() {
-		String toStation=irctc.getRow(1).getCell(1).getStringCellValue();
+		//int j = seventh.getFirstRowNum();
+		//int k = seventh.getLastRowNum();
+		//for(int i=j+1;i<=k;i++) {
+		String toStation=seventh.getRow(1).getCell(1).getStringCellValue();
 		driver.findElement(By.xpath("//input[@placeholder='To*']")).sendKeys(toStation);
 	}
 	
