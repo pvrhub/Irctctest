@@ -89,7 +89,7 @@
             <artifactId>maven-site-plugin</artifactId>
             <version>3.9.0</version>
             <configuration>
-<outputDirectory>${basedir}/target/newsite</outputDirectory>
+<outputDirectory>${basedir}/target/surefire-reports/surefire-report.html</outputDirectory>
 </configuration>
             </plugin>
             
