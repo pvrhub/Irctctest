@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import  com.irctc.base.TestBase;
 import com.irctc.base.TestBasexl;
+import com.irctc.base.TestBasexl1;
 import com.irctc.qa.pages.IrctcLaunch;
 
 
@@ -83,6 +84,8 @@ t.iWait();
 		OkbuttonClick();
 		xl.datadrivenfrom();
 		xl.datadrivento();
+		driver.findElement(By.xpath("//input[@placeholder='Journey Date(dd-mm-yyyy)*']")).click();
+		TestBasexl1.travelDate();
 		FindTrains();
 		
 		String expected =(ppt.getProperty("title"));
