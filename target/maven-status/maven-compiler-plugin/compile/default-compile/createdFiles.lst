@@ -1,4 +1,10 @@
+com\irctc\base\generic.class
+com\irctc\base\TestBasexl1.class
+com\irctc\base\TestBasexl.class
 com\irctc\base\TestBase.class
 com\irctc\qa\pages\IrctcLaunch.class
+com\irctc\base\JavaGeneric.class
+com\irctc\base\JourneyDate.class
+com\irctc\base\sample.class
 com\irctc\testutils\TestUtils.class
 practize\PractizeBrowser.class
