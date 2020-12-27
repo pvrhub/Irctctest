@@ -1,5 +1,9 @@
 package com.irctc.qa.pages;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.irctc.base.TestBase;
 import com.irctc.base.TestBasexl;
 
@@ -53,11 +57,21 @@ public class IrctcLaunch extends TestBase{
 	
 	
 	
-	public static void scroll(){
+	public  void scroll(){
 		JavascriptExecutor Scrolldown = (JavascriptExecutor) driver;
 		Scrolldown.executeScript("window.scrollBy(0,300)", "");
 	}
 	
+	public void extentreportmethod() {
+		ExtentHtmlReporter extentreportpathdefine = new ExtentHtmlReporter("./extentReports/firsttestreport.html");
+		ExtentReports getextentreport = new ExtentReports();
+		getextentreport.attachReporter(extentreportpathdefine);
+		ExtentTest testresults  =getextentreport.createTest("firsttest");
+		testresults.log(Status.INFO, "information");
+		testresults.log(Status.PASS, "title verified");
+		testresults.log(Status.FAIL, "failed reason");
+		//testresults.log(Status.ERROR, "failed reason");
+	}
 
 	public void from() {
 		fromfield.sendKeys("DELHI - DLI");
