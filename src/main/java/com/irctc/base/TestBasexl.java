@@ -39,7 +39,7 @@ public class TestBasexl extends IrctcLaunch {
 			driver.findElement(By.xpath("//input[@placeholder='From*']")).sendKeys(fromStation);
 			//String toStation=seventh.getRow(i).getCell(1).getStringCellValue();
 			//driver.findElement(By.xpath("//input[@placeholder='To*']")).sendKeys(toStation);
-			FindTrains();
+			//FindTrains();
 			
 		//}
 		
