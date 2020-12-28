@@ -76,6 +76,14 @@
                 <executable>C:\Program Files\Java\jdk-12.0.2\bin\javac.exe</executable>
             </configuration>
             </plugin>
+            <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.7.1</version>
+        <configuration>
+          <outputDirectory>${basedir}/target/newsite</outputDirectory>
+        </configuration>
+      </plugin>
             
            <!--   <plugin>
              <groupId>org.apache.maven.plugins</groupId>
@@ -103,6 +111,7 @@
             
             </plugins>      
             </reporting> -->
+            
     <reporting>
     <plugins>
       <plugin>
@@ -123,6 +132,6 @@
       </plugin>
     </plugins>
   </reporting>
-          
+       
 </project>
 
