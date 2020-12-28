@@ -130,8 +130,13 @@
           <outputDirectory>${basedir}/target/newsite</outputDirectory>
         </configuration>
       </plugin>
+       <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-dependency-plugin</artifactId>
+    </plugin>
     </plugins>
   </reporting>
+  
        
 </project>
 
