@@ -57,14 +57,14 @@
 
     <plugins>
     
-        <plugin>
+      <!--   <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.6.0</version>
             <configuration>
                 <fork>true</fork>
                 <executable>C:\Program Files\Java\jdk-12.0.2\bin\javac.exe</executable>
             </configuration>
-        </plugin>
+        </plugin> -->
             <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -72,6 +72,8 @@
             <configuration>
                 <source>1.8</source>
                 <target>1.8</target>
+                <fork>true</fork>
+                <executable>C:\Program Files\Java\jdk-12.0.2\bin\javac.exe</executable>
             </configuration>
             </plugin>
             

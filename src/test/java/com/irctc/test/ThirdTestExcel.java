@@ -54,9 +54,9 @@ public void getTitle() throws IOException{
 	
 	//t.getWindowHandles ();
 	
-		//t.scroll();
+		t.scroll();
 		//driver.findElement(By.xpath("//button[@class='btn btn-primary'and @type='submit']")).click();
-		//Okbutton();
+		Okbutton();
 		//new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(t.OkbuttonClick()));
 t.iWait();
 	  
@@ -78,8 +78,8 @@ t.iWait();
 	
 	
 	
-		scroll();
-		iWait();
+		//scroll();
+		//iWait();
 	
 		OkbuttonClick();
 		xl.datadrivenfrom();
@@ -87,6 +87,8 @@ t.iWait();
 		driver.findElement(By.xpath("//input[@placeholder='Journey Date(dd-mm-yyyy)*']")).click();
 		TestBasexl1.travelDate();
 		FindTrains();
+		
+		
 		
 		String expected =(ppt.getProperty("title"));
 		
