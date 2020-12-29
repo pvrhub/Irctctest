@@ -127,7 +127,7 @@
         <artifactId>maven-site-plugin</artifactId>
         <version>3.9.1</version>
         <configuration>
-          <outputDirectory>C:\Users\pvr23\eclipse-workspace\Irctctest\target\surefire-reports</outputDirectory>
+          <outputDirectory>C:\Users\pvr23\eclipse-workspace\Irctctest\target\newsite</outputDirectory>
         </configuration>
       </plugin>
        <plugin>
