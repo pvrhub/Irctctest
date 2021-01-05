@@ -15,6 +15,7 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -42,6 +43,7 @@ public class IrctcLaunch extends TestBase{
 	
 	@FindBy(xpath="//input[@placeholder='From*']")
 	WebElement fromfield;
+	//[aria-controls='pr_id_1_list']
 	
 	@FindBy(xpath="//input[@placeholder='To*']")
 	WebElement tofield;
@@ -50,6 +52,18 @@ public class IrctcLaunch extends TestBase{
 	public WebElement link;
 	
 	@FindBy(xpath="//button[@label='Find Trains']") WebElement FindTrainsButton;
+	
+	//public By frominput = By.xpath(ppt.getProperty("from"));
+	public By frominput = By.xpath(ppt.getProperty("from"));
+	public By toinput = By.xpath(ppt.getProperty("to"));
+	 
+	private WebElement inputfield(By inputxpath) {
+		return driver.findElement(inputxpath);
+	}
+	
+	public void inputfieldEntry (By inputxpath, String value) {
+		(inputfield(inputxpath)).sendKeys(value);
+	}
 	
 	//public void driverWebElements() {
 		//PageFactory.initElements(driver, this);
