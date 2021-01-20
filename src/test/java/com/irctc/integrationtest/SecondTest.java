@@ -1,4 +1,4 @@
-package com.irctc.test;
+package com.irctc.integrationtest;
 
 import static org.junit.Assert.*;
 

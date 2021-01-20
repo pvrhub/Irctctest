@@ -1,4 +1,4 @@
-package com.irctc.test;
+package com.irctc.regressiontest;
 
 import static org.junit.Assert.*;
 

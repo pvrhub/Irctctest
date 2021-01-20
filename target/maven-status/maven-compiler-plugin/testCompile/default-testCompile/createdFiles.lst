@@ -1,4 +1,2 @@
-com\irctc\test\AfterTest.class
-com\irctc\test\FirstTest.class
-com\irctc\test\inputfieldEntry.class
-com\irctc\test\SecondTest.class
+com\irctc\integrationtest\SecondTest.class
+com\irctc\regressiontest\FirstTest.class

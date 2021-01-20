@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.irctc.test.FirstTest
+Test set: com.irctc.integrationtest.SecondTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.531 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.651 sec
